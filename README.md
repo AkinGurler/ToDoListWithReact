@@ -3,14 +3,14 @@ Making the static interface dynamic by assigning various functions to the button
 Gains:
 onChange() and onClick() Event Handlers,Dynamic CSS,filter function
 
-onChange():
+**onChange():**
 <input
           value={newTitle} 
           onChange={(e) => setnewTitle(e.target.value)} 
           placeholder="Add to the List"
 />
 
-onClick():
+**onClick():**
 const addNew = (title) => {
     setList([...liste, { id: Date.now(), title: title, completed: false }]);//Date.now For unique key,//...liste list will be same and add a data
     setnewTitle("");
@@ -21,7 +21,8 @@ const addNew = (title) => {
           }}
         >
   
-Dynamic css:
+**Dynamic css:**
+          ```javascript
    <div className="list">
         {list.map((item, index) => (
           <div
@@ -31,8 +32,9 @@ Dynamic css:
           >
             {item.title}
           </div>;
+      ```
      
-filter Function:
+**filter Function:**
      
     const clearCompleted = () => {
     setList(list.filter((item) => !item.completed));//if item not completed don't clear
