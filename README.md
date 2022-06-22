@@ -1,5 +1,6 @@
 # ToDoListWithReact
 Making the static interface dynamic by assigning various functions to the buttons.
+
 **Gains:**
 onChange() and onClick() Event Handlers,Dynamic CSS,filter function
 
