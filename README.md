@@ -30,7 +30,7 @@ Dynamic css:
             className={item.completed ? "completed" : ""}// if item completed change css "completed"
           >
             {item.title}
-          </div>
+          </div>;
      
 filter Function:
      
