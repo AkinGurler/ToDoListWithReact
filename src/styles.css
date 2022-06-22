@@ -5,38 +5,38 @@
   text-align: center;
 }
 
-.ekleme_formu input,
-.ekleme_formu button,
-.temizle {
+.add_form input,
+.add_form button,
+.clear {
   padding: 5px;
   border: 0;
   outline: 0;
   font-size: 16px;
 }
 
-.ekleme_formu input {
+.add_form input {
   background: #e1e1e2;
 }
 
-.ekleme_formu button,
-.temizle {
+.add_form button,
+.clear {
   background: #333;
   color: white;
 }
 
-.liste {
+.list {
   padding: 20px 0;
 }
 
-.liste > div {
+.list > div {
   padding: 8px 0;
   border-bottom: 1px solid #ccc;
 }
 
-.liste > div:last-child {
+.list > div:last-child {
   border-bottom: 0;
 }
 
-.yapildi {
+.completed {
   text-decoration: line-through;
 }

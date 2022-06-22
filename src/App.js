@@ -7,29 +7,29 @@ const INITIAL_STATE = [
 ];
 
 export default function App() {
-  const [liste, setList] = useState(INITIAL_STATE);
+  const [list, setList] = useState(INITIAL_STATE);
   const [newTitle, setnewTitle] = useState("");
 
   const addNew = (title) => {
-    setList([...liste, { id: Date.now(), title: title, completed: false }]);
+    setList([...list, { id: Date.now(), title: title, completed: false }]);
     setnewTitle("");
   };
 
   const markCompleted = (id) => {
     setList(
-      liste.map((el) =>
+      list.map((el) =>
         el.id === id ? { ...el, completed: !el.completed } : el
       )
     );
   };
   const clearCompleted = () => {
-    setList(liste.filter((item) => !item.completed));
+    setList(list.filter((item) => !item.completed));
   };
 
   return (
     <div className="App">
       <h1>To Do List</h1>
-      <div className="ekleme_formu">
+      <div className="add_form">
         <input
           value={newTitle} //yazdigimiz input newTitle olacak
           onChange={(e) => setnewTitle(e.target.value)} //içeriği diziye atıyoruz
@@ -43,18 +43,18 @@ export default function App() {
           Add{""}
         </button>
       </div>
-      <div className="liste">
-        {liste.map((item, index) => (
+      <div className="list">
+        {list.map((item, index) => (
           <div
             key={index}
             onClick={() => markCompleted(item.id)}
-            className={item.completed ? "yapildi" : ""}
+            className={item.completed ? "completed" : ""}
           >
             {item.title}
           </div>
         ))}
       </div>
-      <button onClick={() => clearCompleted()} className="temizle">
+      <button onClick={() => clearCompleted()} className="clear">
         Clear Completed
       </button>
     </div>
