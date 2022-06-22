@@ -11,16 +11,18 @@ onChange() and onClick() Event Handlers,Dynamic CSS,filter function
 />
 
 **onClick():**
+```javascript
 const addNew = (title) => {
     setList([...liste, { id: Date.now(), title: title, completed: false }]);//Date.now For unique key,//...liste list will be same and add a data
     setnewTitle("");
   };
+  
 <button
           onClick={() => {
             addNew(newTitle);
           }}
         >
-  
+```
 **Dynamic css:**
  ```javascript
    <div className="list">
@@ -35,10 +37,12 @@ const addNew = (title) => {
 ```
      
 **filter Function:**
-     
+```javascript   
     const clearCompleted = () => {
     setList(list.filter((item) => !item.completed));//if item not completed don't clear
   };
+  
      <button onClick={() => clearCompleted()} className="clear">
         Clear Completed
       </button>
+```
