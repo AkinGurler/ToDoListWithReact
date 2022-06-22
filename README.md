@@ -1,6 +1,6 @@
 # ToDoListWithReact
 Making the static interface dynamic by assigning various functions to the buttons.
-Gains:
+**Gains:**
 onChange() and onClick() Event Handlers,Dynamic CSS,filter function
 
 **onChange():**
@@ -22,7 +22,7 @@ const addNew = (title) => {
         >
   
 **Dynamic css:**
- ```
+ ```javascript
    <div className="list">
         {list.map((item, index) => (
           <div
