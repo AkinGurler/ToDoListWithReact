@@ -22,7 +22,7 @@ const addNew = (title) => {
         >
   
 **Dynamic css:**
-          ```javascript
+ ```
    <div className="list">
         {list.map((item, index) => (
           <div
@@ -32,7 +32,7 @@ const addNew = (title) => {
           >
             {item.title}
           </div>;
-      ```
+```
      
 **filter Function:**
      
