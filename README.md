@@ -5,12 +5,13 @@ Making the static interface dynamic by assigning various functions to the button
 onChange() and onClick() Event Handlers,Dynamic CSS,filter function
 
 **onChange():**
+```javascript
 <input
           value={newTitle} 
           onChange={(e) => setnewTitle(e.target.value)} 
           placeholder="Add to the List"
 />
-
+```
 **onClick():**
 ```javascript
 const addNew = (title) => {
